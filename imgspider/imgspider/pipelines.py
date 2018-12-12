@@ -16,14 +16,12 @@ class ImgspiderPipeline(object):
         socket.setdefaulttimeout(10)
 
         path = '/home/wl/python/spider_test/image/'
-
+        #create save imgage file
         if not os.path.exists(path):
             
             os.makedirs(path)
         else:
 
             urllib.urlretrieve(item['images'],path + item['flag']+'.jpg')
-
-
 
         return item
